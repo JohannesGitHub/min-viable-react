@@ -1,0 +1,19 @@
+.field div {
+  display: flex;
+  justify-content: center;
+} 
+
+.headline h1 {
+  font: bold 52px arial, sans-serif;
+}
+
+.counter div {
+  font: 26px arial, sans-serif;
+  padding: 10px;
+}
+
+.button div {
+  font: 26px arial, sans-serif;
+  border: 1px solid black;
+  padding: 10px;
+}
