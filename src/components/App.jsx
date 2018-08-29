@@ -4,7 +4,7 @@ import Button from './Button'
 import Counter from './Counter'
 
 const App = () => {
-  return(
+  return (
     <div className="field">
       <div className="headline">
         <h1>min-viable-react</h1>

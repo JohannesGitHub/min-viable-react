@@ -1,7 +1,7 @@
 import React from 'react'
- 
+
 const ButtonComponent = props => {
-  return(
+  return (
     <div className="button" onClick={() => props.onSubmit()}>
       <div>submit</div>
     </div>

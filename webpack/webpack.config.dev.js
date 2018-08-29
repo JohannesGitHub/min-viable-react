@@ -12,6 +12,20 @@ module.exports = merge(common, {
     contentBase: path.resolve(__dirname, 'app')
   },
   plugins: [
-    new webpack.HotModuleReplacementPlugin(),
-  ]
+    new webpack.HotModuleReplacementPlugin()
+  ],
+  module: {
+    rules: [
+      {
+        enforce: 'pre',
+        test: /\.(js|jsx)$/,
+        loader: 'eslint-loader',
+        options: {
+          failOnWarning: true,
+          failOnError: true
+        },
+        exclude: /node_modules/
+      }
+    ]
+  }
 })

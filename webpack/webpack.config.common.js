@@ -4,15 +4,15 @@ const CleanWebpackPlugin = require('clean-webpack-plugin')
 
 module.exports = {
   entry: {
-    app: './src/index.js',
+    app: './src/index.js'
   },
   plugins: [
     new CleanWebpackPlugin(['app']),
     new HtmlWebpackPlugin({
       title: 'Minimum-Viable',
       filename: 'index.html',
-      template: './public/index.html',
-    }),
+      template: './public/index.html'
+    })
   ],
   resolve: {
     extensions: ['*', '.js', '.jsx']
@@ -21,25 +21,17 @@ module.exports = {
     rules: [
       {
         test: /\.(js|jsx)$/,
-        use: {
-          loader: 'babel-loader',
-          options: {
-            presets: [
-              '@babel/react',
-              '@babel/preset-env'
-            ],
-          },
-        },
-        exclude: /node_modules/,
+        loader: 'babel-loader',
+        exclude: /node_modules/
       },
       {
         test: /\.css$/,
         use: ['style-loader', 'css-loader']
-      },
-    ],
+      }
+    ]
   },
   output: {
     filename: '[name].bundle.js',
-    path: path.resolve(__dirname, 'app'),
-  },
+    path: path.resolve(__dirname, 'app')
+  }
 }

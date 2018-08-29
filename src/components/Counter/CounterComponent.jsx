@@ -1,7 +1,7 @@
 import React from 'react'
- 
+
 const CounterComponent = props => {
-  return(
+  return (
     <div className="counter">
       <div>{props.counter}</div>
     </div>

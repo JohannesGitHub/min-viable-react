@@ -11,7 +11,7 @@ const mapDispatchToProps = dispatch => ({
 
 const Button = connect(
   mapStateToProps,
-  mapDispatchToProps,
+  mapDispatchToProps
 )(ButtonComponent)
 
 export default Button
