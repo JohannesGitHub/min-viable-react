@@ -21,6 +21,7 @@ module.exports = merge(common, {
         test: /\.(js|jsx)$/,
         loader: 'eslint-loader',
         options: {
+          configFile: path.resolve(__dirname, '.eslintrc'),
           failOnWarning: true,
           failOnError: true
         },
